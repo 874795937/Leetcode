@@ -23,6 +23,16 @@ class Solution(object):
             add = temp//10
             result.append(temp%10)
             check -= 1
+        # print(result)
+        # if num1Length <= num2Length:
+        #     for i in range(num2Length-num1Length):
+        #         temp = int(num2[check])+add
+        #         add = temp//10
+        #         result.append(temp%10)
+        #         # print(temp, add, result)
+        #         check -= 1
+        #     if add == 1:
+        #         result.append(add)
 
         result = list(reversed(result))
         result = [str(integer) for integer in result]
