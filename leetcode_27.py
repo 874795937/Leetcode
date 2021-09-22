@@ -13,5 +13,6 @@ class Solution(object):
                 slow += 1
             fast += 1
         return slow
+
 s = Solution()
 s.removeElement([0,1,2,2,3,0,4,2], 2)
