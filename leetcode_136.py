@@ -33,7 +33,14 @@ class Solution1(object):
                     pre = nums[i]
                     # print(pre, nums[i])
         return pre
-        
-s = Solution1()
+
+
+class Solution2(object):
+    def singleNumber(self, nums):
+        result = nums[0]
+        for i in range(1, len(nums)):
+            result ^= nums[i]
+        return result
+s = Solution2()
 a = s.singleNumber([2,1,2])
 print(a)
