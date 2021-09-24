@@ -17,7 +17,7 @@ class Solution(object):
                 dfs(path+")", left, right+1)
         dfs("", 0, 0)
         return result
-        
+
 s = Solution()
 a = s.generateParenthesis(3)
 print(a)
