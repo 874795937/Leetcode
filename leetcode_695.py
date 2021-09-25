@@ -24,7 +24,6 @@ class Solution(object):
                 if grid[i][j] == 1:
                     a = dfs(i, j)
                     final = max(a, final)
-
         return final
 
 s = Solution()
