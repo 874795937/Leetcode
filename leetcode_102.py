@@ -29,6 +29,26 @@ class Solution(object):
                     queue.append(node[i].right)
         return result
 
+class Solution1(object):
+    def levelOrder(self, root):
+        if not root:
+            return []
+        queue = []
+        result = []
+        queue.append(root)
+        while queue:
+            length = len(queue)
+            temp = []
+            for i in range(length):
+                node = queue.pop(0)
+                temp.append(node.val)
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+            result.append(temp)
+        print(result)
+
 node1 = TreeNode(3)
 node2 = TreeNode(9)
 node3 = TreeNode(20)
@@ -40,5 +60,5 @@ node1.right = node3
 node3.left = node4
 node3.right = node5
 
-s = Solution()
+s = Solution1()
 s.levelOrder(node1)
