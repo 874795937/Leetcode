@@ -40,12 +40,29 @@ class Solution1(object):
         remove(head, val, dummy)
         return dummy.next
 
-node1 = ListNode(1)
-node2 = ListNode(2)
-node3 = ListNode(3)
-node4 = ListNode(4)
-node5 = ListNode(4)
-node6 = ListNode(6)
+class Solution2(object):
+    def removeElements(self, head, val):
+        pre = None
+        cur = head
+        while cur:
+            next = cur.next
+            if cur.val == val:
+                if pre is None:
+                    head = next
+                else:
+                    pre.next = next
+            else:
+                pre = cur
+            cur = next
+        return head
+
+
+node1 = ListNode(7)
+node2 = ListNode(7)
+node3 = ListNode(7)
+node4 = ListNode(7)
+node5 = ListNode(7)
+node6 = ListNode(7)
 node7 = ListNode(7)
 node1.next = node2
 node2.next = node3
@@ -54,8 +71,8 @@ node4.next = node5
 node5.next = node6
 node6.next = node7
 
-s = Solution1()
-head = s.removeElements(node1, 4)
+s = Solution2()
+head = s.removeElements(node1, 7)
 while head:
     print(head.val)
     head = head.next
