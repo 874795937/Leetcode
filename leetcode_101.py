@@ -43,6 +43,22 @@ class Solution1(object):
             queue.append(right.left)
         return True
 
+class Solution2(object):
+    def isSymmetric(self, root):
+        if not root.left and not root.right:
+            return True
+        if (not root.left and root.right) or (root.left and not root.right):
+            return False
+
+        def dfs(left, right):
+            if not left and not right:
+                return True
+            if (not left and right) or (left and not right):
+                return False
+            if left.val != right.val:
+                return False
+            return dfs(left.right, right.left) and dfs(left.left, right.right)
+        
 root = TreeNode(1)
 node1 = TreeNode(2)
 node2 = TreeNode(1)
