@@ -12,9 +12,6 @@ class Solution(object):
         :type targetSum: int
         :rtype: bool
         """
-        if root is None:
-            return False
-        self.result = False
         def dfs(root, target):
             if not root:
                 if target == 0:
@@ -27,7 +24,7 @@ class Solution(object):
         return self.result
 
 node1 = TreeNode(1)
-node2 = TreeNode(2)
+# node2 = TreeNode(2)
 # node3 = TreeNode(8)
 # node4 = TreeNode(11)
 # node5 = TreeNode(13)
@@ -36,7 +33,7 @@ node2 = TreeNode(2)
 # node8 = TreeNode(2)
 # node9 = TreeNode(1)
 
-node1.left = node2
+# node1.left = node2
 # node1.right = node3
 # node2.left = node4
 # node4.left = node7
