@@ -64,6 +64,18 @@ class Solution2(object):
             head = nextNode
         return result
 
+class Solution3(object):
+    def reverseList(self, head):
+        pre = None
+        cur = head
+        while cur:
+            next = cur.next
+            cur.next = pre
+            pre = cur
+            cur = next
+        return pre
+
+
 node1 = ListNode(1)
 node2 = ListNode(2)
 node3 = ListNode(3)
@@ -73,7 +85,7 @@ node1.next = node2
 node2.next = node3
 node3.next = node4
 node4.next = node5
-s = Solution2()
+s = Solution3()
 head = s.reverseList(node1)
 # print(node1.next.val)
 while head:
