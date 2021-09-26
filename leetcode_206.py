@@ -75,7 +75,6 @@ class Solution3(object):
             cur = next
         return pre
 
-
 node1 = ListNode(1)
 node2 = ListNode(2)
 node3 = ListNode(3)
