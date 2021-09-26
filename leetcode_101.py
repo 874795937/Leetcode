@@ -58,7 +58,7 @@ class Solution2(object):
             if left.val != right.val:
                 return False
             return dfs(left.right, right.left) and dfs(left.left, right.right)
-        
+        return dfs(root.left, root.right)
 root = TreeNode(1)
 node1 = TreeNode(2)
 node2 = TreeNode(1)
